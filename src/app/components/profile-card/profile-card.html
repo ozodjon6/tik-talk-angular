@@ -1,0 +1,24 @@
+@if (profile) {
+  <div class="border rounded py-8 px-6 grid grid-cols-4 gap-8">
+    <div class="flex items-center gap-5">
+      <img
+        [src]="profile.avatarUrl | imgUrl"
+        [alt]="profile.username"
+        class="w-[71px] h-[71px] rounded-full"
+      >
+      <div class="flex flex-col items-start">
+        <h6 class="text-lg font-extrabold mb-1">{{profile.firstName}} {{profile.lastName}}</h6>
+        <p class="text-sm font-normal">{{profile.username}}</p>
+      </div>
+    </div>
+    <div class="text-xs">{{profile.description}}</div>
+      <div class="flex items-center flex-wrap gap-2">
+        @for (stack of profile.stack; track stack) {
+        <div class="border !py-1 !px-2 rounded text-xs w-max h-max leading-md font-bold">
+          {{stack}}
+        </div>
+        }
+      </div>
+    <div class="bg-[#AE7AFF] flex items-center justify-center w-full max-w-[132px] h-11 text-black rounded font-bold text-sm leading-lg !py-2.5 px-5">Написать</div>
+  </div>
+}
