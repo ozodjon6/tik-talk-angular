@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  width: 100%;
+  max-width: 1112px;
+  margin: 0 auto;
+  height: 100dvh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: red;
+}

@@ -1,1 +1,19 @@
-<p>login-page works!</p>
+<form class="flex flex-col items-start justify-center w-full max-w-[440px]"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+>
+  <h1 class="font-extrabold text-5xl text-left">Вход</h1>
+  <div class="flex flex-col gap-4 mt-15 w-full">
+    <label class="flex flex-col">
+      <span class="font-bold text-xs">Telegram username</span>
+      <input formControlName="username"
+             class="border border-white font-normal text-sm w-full py-3 px-5 rounded mt-2" type="text" placeholder="Введите логин">
+    </label>
+    <label class="flex flex-col">
+      <span class="font-bold text-xs">Пароль</span>
+      <input formControlName="password" class="border border-white font-normal text-sm py-3 px-5 rounded mt-2" type="password" placeholder="Введите пароль">
+    </label>
+    <button class="bg-[#AE7AFF] hover:bg-[#AE4AFF] rounded py-2.5 font-bold text-sm cursor-pointer" type="submit">Войти</button>
+  </div>
+</form>
+<img src="/assets/svg/logo-big.svg" alt="">
