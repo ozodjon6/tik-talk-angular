@@ -20,7 +20,6 @@ export class LoginPage {
   onSubmit() {
 
     if (this.form.valid) {
-      console.log(this.form.value);
       //@ts-ignore
       this.loginService.login(this.form.value).subscribe(value => {
         console.log(value);
