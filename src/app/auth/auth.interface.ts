@@ -1,4 +1,22 @@
+export interface UserSettings {
+  themeDark: boolean;
+}
+
+export interface User {
+  name: string;
+  email: string;
+  id: string;
+  role: string;
+  isActive: boolean;
+  settings: UserSettings;
+}
+
+export interface Token {
+  accessToken: string;
+  refreshToken: string;
+}
+
 export interface AuthInterFace {
-  access_token: string;
-  refresh_token: string;
+  user: User;
+  token: Token;
 }
